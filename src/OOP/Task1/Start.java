@@ -1,18 +1,23 @@
 package OOP.Task1;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Scanner;
-//Борис Бритва 17 2 2200,3 7,8
-//Анатолий Пупкин 16 1 40000,3 7,1
-//Петор Камушкин 18 3 20030,2 6,5
+
+//Бритва Борис Василивич 1999 9660580019
+//Пупкин Анатолий Петрович 1980 9994562345
+//Камушкин Петр Спиридонович 1994 9064562578
 //Kamushkin Vasilui Speredonovich 34 190 98
 public class Start {
+
     public static void main(String[] args) {
-        Scanner input  = new Scanner(System.in);
-        Human humanOne = new Human(input.next(), input.next(), input.next(), input.nextInt(), input.nextInt(), input.nextInt());
-        input.close();
-        humanOne.info();
-        System.out.println(humanOne.bodyMassIndex());
+        Scanner input = new Scanner(System.in);
+        Thing wire = new Thing("wire", new Material("steel", 7850), 0.03);
+        wire.show();
+        wire.setMaterial(new Material("copper", 8500));
+        wire.setVolume(input.nextDouble());
+        wire.show();
     }
 }
 

@@ -1,12 +1,24 @@
 package OOP.Task1;
 
-public class Rectangle {
+public class Rectangle extends Shape{
     double xLeft, yLeft, xRight, yRight;
     Rectangle(double xLeft, double yLeft, double xRight, double yRight){
+        super();
         this.xLeft = xLeft;
         this.yLeft = yLeft;
         this.xRight = xRight;
         this.yRight = yRight;
+    }
+    Rectangle(double xLeft, double yLeft, double xRight, double yRight, int red, int green, int blue){
+        super(red, green, blue);
+        this.xLeft = xLeft;
+        this.yLeft = yLeft;
+        this.xRight = xRight;
+        this.yRight = yRight;
+    }
+    void draw(){
+        System.out.printf("Нарисован прямоугольник, цвет RGB: red %d, green %d, blue %d\n", super.getColor()[0],
+                super.getColor()[1], super.getColor()[2]);
     }
     public String getCenter(){
         double xCenter, yCenter;
