@@ -1,4 +1,4 @@
-package OOP.Task1;
+package OOP.Task1.view;
 
 import javax.swing.*;
 import java.awt.*;

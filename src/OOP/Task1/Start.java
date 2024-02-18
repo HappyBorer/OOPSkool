@@ -5,19 +5,30 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-//Бритва Борис Василивич 1999 9660580019
-//Пупкин Анатолий Петрович 1980 9994562345
-//Камушкин Петр Спиридонович 1994 9064562578
-//Kamushkin Vasilui Speredonovich 34 190 98
+
 public class Start {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        Thing wire = new Thing("wire", new Material("steel", 7850), 0.03);
-        wire.show();
-        wire.setMaterial(new Material("copper", 8500));
-        wire.setVolume(input.nextDouble());
-        wire.show();
+        int size = input.nextInt();
+        Car[] cars = new Car[size];
+        for(int i = 0; i < cars.length; i++){
+            cars[i] = new Car(input.next(), input.next(), input.nextDouble(), input.nextInt());
+        }
+        cars[input.nextInt() - 1].setEngineCapacity(input.nextDouble());
+        for(Car item: cars){
+            System.out.println(item);
+        }
+        int newIndex = 0;
+        int newCar = cars[newIndex].getLife();
+        for(int i = 1; i < cars.length;i++){
+            if(newCar > cars[i].getLife()){
+                newIndex = i;
+                newCar = cars[newIndex].getLife();
+            }
+        }
+        System.out.println();
+        System.out.println(cars[newIndex]);
     }
 }
 

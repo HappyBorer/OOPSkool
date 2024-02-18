@@ -1,15 +1,38 @@
 package OOP.Task1;
 
 public class Commodity {
-    String productName;
-    int price;
-    public void setPrice(int price){
+    private String productName;
+    private int price;
+    Commodity(){
+
+    }
+    Commodity(String productName, int price){
+        this.productName = productName;
         this.price = price;
+    }
+
+    public String toString(){
+        return String.format("%s;%d", productName, price);
     }
     public void show(){
         System.out.printf("""
                 Наименование товара: %s           
                 Цена товара: %d
                 """, productName, price);
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+    public void setPrice(int price){
+        this.price = price;
     }
 }
