@@ -19,14 +19,11 @@ Sample Output:
  */
 public class Example1 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int oneWorker = input.nextInt();
-        int twoWorker = input.nextInt();
-        int threeWorker = input.nextInt();
-        int max = oneWorker > twoWorker ? oneWorker : twoWorker;
-        max = max > threeWorker ? max : threeWorker;
-        int min = oneWorker < twoWorker ? oneWorker : twoWorker;
-        min = min < threeWorker ? min : threeWorker;
-        System.out.println(max - min);
+        String[] str = "10+10".split("[^/*\\-+]");
+        for (int i = 0; i < str.length; i++) {
+            System.out.println(str[i]);
+        }
+        System.out.println(str.length);
+
     }
 }

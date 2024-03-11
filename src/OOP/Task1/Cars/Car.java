@@ -1,4 +1,4 @@
-package OOP.Task1;
+package OOP.Task1.Cars;
 
 import java.util.Calendar;
 
@@ -14,10 +14,10 @@ public class Car {
         Calendar calendar = Calendar.getInstance();
         thisYear = calendar.get(Calendar.YEAR);
     }
-    Car(){
+    public Car(){
 
     }
-    Car(String brand, String surnameOwner, double engineCapacity, int yearRelease){
+    public Car(String brand, String surnameOwner, double engineCapacity, int yearRelease){
         this.brand = brand;
         this.surnameOwner = surnameOwner;
         this.engineCapacity = engineCapacity;

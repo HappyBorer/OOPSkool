@@ -26,9 +26,8 @@ public class WindowPopup {
      static class My_Frami extends JFrame {
         public My_Frami() {
             setTitle("Test");
-            Toolkit toolkit = Toolkit.getDefaultToolkit();
-            Dimension dimension = toolkit.getScreenSize();
-            setBounds(dimension.width/2 - 250, dimension.height/2 - 150, 800, 600);
+            setSize(800, 600);
+            setLocationRelativeTo(null);
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             New_Panel panel = new New_Panel();
             Container pane1 = getContentPane();

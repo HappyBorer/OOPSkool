@@ -1,11 +1,11 @@
-package OOP.Task1;
+package OOP.Task1.MyCompany;
 
 public class Employee {
     private String surname;
     private String sex;
     private int age, salary;
     Employee(){}
-    Employee(String surname, String sex, int age, int salary){
+    public Employee(String surname, String sex, int age, int salary){
         this.surname = surname;
         this.sex = sex;
         this.age = age;
